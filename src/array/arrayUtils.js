@@ -4,14 +4,11 @@
  * @param condition Takes an item of type T and checks a boolean condition
  * @return Array with two type T arrays; can be accessed by destructuring the result in [matching, nonMatching]
  */
-export function partitionArrayByCondition<T>(
-  array: T[],
-  condition: (item: T) => boolean
-): [T[], T[]] {
-  return array.reduce<[T[], T[]]>(
-    ([match, rest], item) => {
-      return condition(item) ? [[...match, item], rest] : [match, [...rest, item]];
-    },
-    [[], []]
-  );
+export function partitionArrayByCondition(array, condition) {
+	return array.reduce(
+		([match, rest], item) => {
+			return condition(item) ? [[...match, item], rest] : [match, [...rest, item]];
+		},
+		[[], []]
+	);
 }

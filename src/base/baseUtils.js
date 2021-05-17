@@ -1,12 +1,12 @@
-const generateUUID = () => {
+export function generateUUID() {
 	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
 		var r = (Math.random() * 16) | 0,
 			v = c === 'x' ? r : (r & 0x3) | 0x8;
 		return v.toString(16);
 	});
-};
+}
 
-const isValidJson = jsonString => {
+export function isValidJson(jsonString) {
 	try {
 		const o = JSON.parse(jsonString);
 		/* Handle non-exception-throwing cases:
@@ -18,6 +18,8 @@ const isValidJson = jsonString => {
 	} catch (e) {
 		return false;
 	}
-};
+}
 
-export { generateUUID, isValidJson };
+export function chunkString(baseString, size) {
+	return baseString.match(new RegExp(`.{1,${size}}`, 'g'));
+}
