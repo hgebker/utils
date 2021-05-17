@@ -1,0 +1,28 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es2021": true
+	},
+	"extends": ["google"],
+	"parserOptions": {
+		"ecmaVersion": 12
+	},
+	"rules": {
+		"linebreak-style": "off",
+		"indent": "off",
+		"quotes": "off",
+		"max-len": "off",
+		"comma-dangle": "off",
+		"curly": "error",
+		"spaced-comment": "off",
+		"semi": "off",
+		"new-cap": "off",
+		"require-jsdoc": "off",
+		"object-curly-spacing": 0,
+		"space-before-function-paren": "off",
+		"no-tabs": "off",
+		"quote-props": "off",
+		"prefer-promise-reject-errors": "off"
+	}
+}

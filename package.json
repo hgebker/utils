@@ -1,0 +1,30 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "Utility functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hgebker/utils.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "Hannes Gebker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hgebker/utils/issues"
+  },
+  "homepage": "https://github.com/hgebker/utils#readme",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/date-fns": "^2.6.0",
+    "axios": "^0.21.1",
+    "date-fns": "^2.21.3",
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0"
+  }
+}
