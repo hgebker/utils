@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@hgebker/utils",
   "version": "1.0.0",
   "description": "Utility functions",
   "main": "index.js",
