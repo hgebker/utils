@@ -9,4 +9,8 @@ export declare interface CustomFile {
 
 export declare function readFile(file: File, contentChunkSize?: number): Promise<string[]>;
 
+export declare function readMultipleFiles(files: File[], contentChunkSize?: number): Promise<string[][]>;
+
 export declare async function convertFile(file: File, contentChunkSize?: number): Promise<CustomFile>;
+
+export declare function convertMultipleFiles(files: File[], contentChunkSize?: number): Promise<CustomFile[]>;

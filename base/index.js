@@ -1,25 +1,21 @@
-export function generateUUID() {
-	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-		var r = (Math.random() * 16) | 0,
-			v = c === 'x' ? r : (r & 0x3) | 0x8;
-		return v.toString(16);
-	});
-}
-
 export function isValidJson(jsonString) {
 	try {
 		const o = JSON.parse(jsonString);
-		/* Handle non-exception-throwing cases:
-			Neither JSON.parse(false) or JSON.parse(1234) throw errors, hence the type-checking,
-			but... JSON.parse(null) returns null, and typeof null === "object",
-			so we must check for that, too. Thankfully, null is falsey, so this suffices: */
 
-		return o && typeof o === 'object' ? o : false;
+		return o && typeof o === 'object';
 	} catch (e) {
 		return false;
 	}
 }
 
 export function chunkString(baseString, size) {
-	return baseString.match(new RegExp(`.{1,${size}}`, 'g'));
+	return `${baseString}`.match(new RegExp(`.{1,${size}}`, 'g'));
+}
+
+export function cutStringEnd(baseString, separatorString) {
+	return `${baseString}`.split(separatorString).pop();
+}
+
+export function cutStringStart(baseString, separatorString) {
+	return `${baseString}`.split(separatorString).shift();
 }

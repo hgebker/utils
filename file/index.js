@@ -27,6 +27,10 @@ export function readFile(file, contentChunkSize) {
 	});
 }
 
+export function readMultipleFiles(files, contentChunkSize) {
+	return Promise.all(files.map(file => readFile(file, contentChunkSize)));
+}
+
 /**
  * Converts a File-Object (e.g. from HTML input) into a normal JS object
  * @param {File} file The file to convert
@@ -42,4 +46,8 @@ export async function convertFile(file, contentChunkSize) {
 		lastModifiedDate: file.lastModifiedDate,
 		content: await readFile(file, contentChunkSize)
 	};
+}
+
+export function convertMultipleFiles(files, contentChunkSize) {
+	return Promise.all(files.map(file => convertFile(file, contentChunkSize)));
 }
