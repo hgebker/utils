@@ -1,5 +1,5 @@
-export function generateUUID(): string;
+export declare function generateUUID(): string;
 
-export function isValidJson(jsonString: string): boolean | Record<string, any>;
+export declare function isValidJson(jsonString: string): boolean | Record<string, any>;
 
-export function chunkString(baseString: string, size: number): string[];
+export declare function chunkString(baseString: string, size: number): string[];

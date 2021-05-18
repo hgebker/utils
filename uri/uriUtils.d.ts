@@ -1,16 +1,16 @@
-export function queryToParams(query: string): URLSearchParams;
+export declare function queryToParams(query: string): URLSearchParams;
 
-export function paramsToQuery(params: Record<string, unknown>, delimiter: string): string;
+export declare function paramsToQuery(params: Record<string, unknown>, delimiter: string): string;
 
-export type LocationKey = 'hash' | 'search';
+export declare type LocationKey = 'hash' | 'search';
 
-export interface ResponseType {
+export declare interface ResponseType {
 	name: string;
 	locationKey: string;
 	dataKey: string;
 }
 
-export const RESPONSE_TYPES: Record<string, ResponseType> = {
+export declare const RESPONSE_TYPES: Record<string, ResponseType> = {
 	CODE: {
 		name: 'code',
 		locationKey: 'search',

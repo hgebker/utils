@@ -1,5 +1,3 @@
-declare module '@utils/api' {
-	import { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
 
-	export function logError(params: AxiosError): void;
-}
+export declare function logError(params: AxiosError): void;

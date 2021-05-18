@@ -1,1 +1,1 @@
-export function dateToString(date: Date): string;
+export declare function dateToString(date: Date): string;

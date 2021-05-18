@@ -1,4 +1,4 @@
-export interface CustomFile {
+export declare interface CustomFile {
 	name: string;
 	size: number;
 	type: string;
@@ -7,6 +7,6 @@ export interface CustomFile {
 	content: string[];
 }
 
-export function readFile(file: File, contentChunkSize?: number): Promise<string[]>;
+export declare function readFile(file: File, contentChunkSize?: number): Promise<string[]>;
 
-export async function convertFile(file: File, contentChunkSize?: number): Promise<CustomFile>;
+export declare async function convertFile(file: File, contentChunkSize?: number): Promise<CustomFile>;
